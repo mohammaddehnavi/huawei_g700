@@ -18,12 +18,8 @@
 # Todo:
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, $(SRC_TARGET_DIR)/device/huawei/g700/full_g700.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk)
+$(call inherit-product, device/huawei/g700/full_g700.mk)
 
-# Inherit some common Havoc stuff
-$(call inherit-product, vendor/rr/config/common_full_phone.mk)
 
 # Bootanimation Resolution
 TARGET_BOOT_ANIMATION_RES := 1080
@@ -31,8 +27,7 @@ TARGET_BOOT_ANIMATION_RES := 1080
 # Google Connectivity Services
 TARGET_INCLUDE_WIFI_EXT := true
 
-# Inherit from X01BD device
-$(call inherit-product, $(LOCAL_PATH)/device.mk)
+
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := rr_g700
@@ -44,11 +39,11 @@ PRODUCT_MANUFACTURER := huawei
 
 PRODUCT_GMS_CLIENTID_BASE := android-huawei
 
-TARGET_VENDOR := asus
+TARGET_VENDOR := huawei
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_DEVICE=ASUS_X01BD_1 \
-    PRODUCT_NAME=WW_X01BD \
+    PRODUCT_DEVICE=huawei_g700 \
+    PRODUCT_NAME=g700 \
     PRIVATE_BUILD_DESC="2013023-user 8.1.0 HM2013023 8.1.0 release-keys"
 
 # Build fingerprint
